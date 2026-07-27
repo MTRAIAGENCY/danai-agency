@@ -652,13 +652,8 @@
       <h2 class="text-3xl md:text-4xl font-black mt-3 mb-4">بگذارید کسب‌وکار شما را هوشمند کنیم</h2>
       <p class="text-muted">فرم زیر را تکمیل کنید تا کارشناسان DANAI در سریع‌ترین زمان با شما تماس بگیرند.</p>
     </div>
-<form
-  id="contactForm"
-  name="contact"
-  method="POST"
-  data-netlify="true"
-  class="reveal glass-strong rounded-xl2 p-6 md:p-10 grid sm:grid-cols-2 gap-5"
->
+
+    <form id="contactForm" class="reveal glass-strong rounded-xl2 p-6 md:p-10 grid sm:grid-cols-2 gap-5" onsubmit="handleContactSubmit(event)">
       <div class="flex flex-col gap-2 sm:col-span-1">
         <label for="cName" class="text-sm font-semibold">نام</label>
         <input id="cName" required type="text" class="bg-white/70 border border-slate-200 rounded-xl px-4 py-3 text-sm outline-none focus-visible:ring-2 focus-visible:ring-primary/40" placeholder="نام و نام خانوادگی">
@@ -994,21 +989,6 @@
     document.getElementById('contactSuccess').classList.remove('hidden');
     e.target.reset();
   }
-
-<form name="contact" method="POST" data-netlify="true">
-  <input type="hidden" name="form-name" value="contact">
-
-  <input type="text" name="name" placeholder="نام">
-
-  <input type="text" name="phone" placeholder="شماره تماس">
-
-  <input type="text" name="company" placeholder="نام شرکت">
-
-  <textarea name="description"></textarea>
-
-  <button type="submit">ارسال</button>
-</form>
-  
 </script>
 </body>
 </html>
